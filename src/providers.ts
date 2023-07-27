@@ -1,6 +1,14 @@
+export type FunctionName = "buildTransaction";
+
+interface FunctionCall {
+  name: FunctionName;
+  inputs: string[];
+}
+
 interface Provider {
   name: string;
   method: "none" | "kleverWeb";
+  functions?: FunctionCall[];
 }
 
 export const providers: Provider[] = [
@@ -11,5 +19,11 @@ export const providers: Provider[] = [
   {
     name: "Klever",
     method: "kleverWeb",
+    functions: [
+      {
+        name: "buildTransaction",
+        inputs: ["receiver", "amount"],
+      },
+    ],
   },
 ];
