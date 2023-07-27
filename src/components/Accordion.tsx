@@ -24,15 +24,15 @@ export function Accordion({ title, children }: AccordionProps) {
         <ChevronDown
           size={16}
           className={twMerge(
-            "transition-all duration-300",
+            "transition-all",
             "group-data-[opened=true]:rotate-180"
           )}
         />
       </button>
       <div
         className={twMerge(
-          "h-auto max-h-0 transition-all duration-300 overflow-hidden",
-          "group-data-[opened=true]:max-h-32"
+          "h-auto max-h-0 transition-all overflow-hidden",
+          "group-data-[opened=true]:max-h-32 group-data-[opened=true]:py-2"
         )}
       >
         {children}

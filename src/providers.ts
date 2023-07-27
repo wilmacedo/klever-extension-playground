@@ -1,10 +1,15 @@
-export const providers = [
+interface Provider {
+  name: string;
+  method: "none" | "kleverWeb";
+}
+
+export const providers: Provider[] = [
+  {
+    name: "Select one",
+    method: "none",
+  },
   {
     name: "Klever",
     method: "kleverWeb",
-  },
-  {
-    name: "Web3",
-    method: "ethereum",
   },
 ];
